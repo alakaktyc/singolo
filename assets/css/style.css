@@ -66,3 +66,35 @@ html, body {
     color: #f06c64;
     transition: all 0.5s ease-in;
 }
+
+.slider{
+    height: 594px;
+    background-color: #f06c64;
+    border-bottom: 6px solid #ea676b;
+}
+.slider__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider__phone-left,
+.slider__phone-right{
+    position: relative;
+    background: #f2f2f2;
+    border-radius: 25px;
+    box-shadow: 26px 25px 0 -1px #ce5d56,
+                18px 19px 0 -1px #ce5d56,
+                13px 15px 0 -1px #ce5d56,
+                8px 10px 0 -1px #ce5d56;
+}
+.slider__phone-left{
+    width: 215px;
+    height: 458px;
+    margin: 54px 0 0 77px;
+}
+.slider__phone-right{
+    width: 458px;
+    height: 215px;
+    margin: 52px 93px 0 0;
+}
