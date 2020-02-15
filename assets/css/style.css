@@ -157,7 +157,7 @@ html, body {
     left:11px;
     width: 188px;
     height: 333px;
-    background: url(../img/disp-one.png) no-repeat ;
+    background: url(..//img/disp-one.png) no-repeat ;
     background-size: cover;
     border: 2.5px solid #c6c6c6;
     border-radius: 3px;
@@ -196,7 +196,7 @@ html, body {
 }
 
 .slider__phone.slider__phone--rotate > .slider__display {
-    background: url(../img/disp-two.png) no-repeat;
+    background: url(..//img/disp-two.png) no-repeat;
 }
 
 .our-services {
@@ -237,11 +237,12 @@ html, body {
 .our-services__item h3 {
     text-align: justify;
     margin-top: 20px;
+    margin-bottom: 0;
 }
 
 .our-services__item p {
     font-size: 11px;
     word-spacing: 9px;
     line-height: 18px;
-    padding: 12px 0 25px 0;
+    padding-bottom: 16px;
 }
