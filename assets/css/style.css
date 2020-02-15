@@ -15,6 +15,16 @@ html, body {
     margin: 0 auto;
 }
 
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
 .header {
     height: 89px;
     background-color: #2d303a;
@@ -34,14 +44,15 @@ html, body {
     font-size: 24px;
     text-transform: uppercase;
 }
+
 .header__logo:after {
     color: #f06c64;
     content: '*';
 }
 
 .header__menu {
-    margin: 0;
     display: flex;
+    margin: 0;
 }
 
 .header__item {
@@ -67,20 +78,50 @@ html, body {
     transition: all 0.5s ease-in;
 }
 
-.slider{
+.slider {
     height: 594px;
     background-color: #f06c64;
     border-bottom: 6px solid #ea676b;
 }
+
 .slider__inner{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.slider__phone-left,
-.slider__phone-right{
+.slider__switch {
     position: relative;
+    bottom: 174px;
+    display: inline-block;
+    padding: 8px;
+    border: solid #ca4549;
+    border-width: 0 5px 5px 0;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.slider__switch:hover {
+    border-color: #acacac;
+    transition: all 0.3s linear;
+}
+
+.slider__switch.slider__switch--left {
+    left: 0;
+    transform: rotate(135deg);
+}
+
+.slider__switch.slider__switch--right {
+    left: 895px;
+    transform: rotate(-45deg);
+}
+
+.slider__phone {
+    position: relative;
+    top: 53px;
+    left: 75px;
+    width: 215px;
+    height: 458px;
     background: #f2f2f2;
     border-radius: 25px;
     box-shadow: 26px 25px 0 -1px #ce5d56,
@@ -88,13 +129,119 @@ html, body {
                 13px 15px 0 -1px #ce5d56,
                 8px 10px 0 -1px #ce5d56;
 }
-.slider__phone-left{
-    width: 215px;
-    height: 458px;
-    margin: 54px 0 0 77px;
+
+.slider__camera {
+    position: absolute;
+    top:16px;
+    left:103px;
+    width: 5px;
+    height: 5px;
+    background: #eb5055;
+    border-radius: 50%;
+    border: 2.5px solid #e1e1e1;
 }
-.slider__phone-right{
-    width: 458px;
-    height: 215px;
-    margin: 52px 93px 0 0;
+
+.slider__speaker {
+    position: absolute;
+    top:36px;
+    left:90px;
+    width: 36px;
+    height: 5px;
+    background-color: #acacac;
+    border-radius: 5px;
+}
+
+.slider__display {
+    position: absolute;
+    top:61.5px;
+    left:11px;
+    width: 188px;
+    height: 333px;
+    background: url(../img/disp-one.png) no-repeat ;
+    background-size: cover;
+    border: 2.5px solid #c6c6c6;
+    border-radius: 3px;
+}
+
+.slider__button {
+    position: absolute;
+    top:407px;
+    left:86px;
+    width: 43px;
+    height: 43px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.slider__button > span {
+    position: absolute;
+    top:12px;
+    left:12px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border: 2px solid #c2c2c2;
+    border-radius: 5px;
+}
+
+.slider__phone.slider__phone--rotate {
+    top: 52px;
+    left: -216px;
+    box-shadow: 26px -25px 0 -1px #ce5d56,
+                18px -19px 0 -1px #ce5d56,
+                13px -15px 0 -1px #ce5d56,
+                8px -10px 0 -1px #ce5d56;
+    transform: rotate(90deg);
+}
+
+.slider__phone.slider__phone--rotate > .slider__display {
+    background: url(../img/disp-two.png) no-repeat;
+}
+
+.our-services {
+    height: 496px;
+    color: #666d89;
+    background-color: #f2f2f2;
+    border-bottom: 6px solid #fff;
+}
+
+.our-services__title {
+    margin: 0;
+    padding-top: 60px;
+    font-size: 30px;
+    font-weight: 800;
+    text-align: justify;
+}
+
+.our-services__text {
+    padding-top: 2px;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 31px;
+    letter-spacing: 0.5px;
+}
+
+.our-services__item{
+    display: flex;
+    width: 300px;
+}
+
+.our-services__item .icon {
+    margin-top: 30px;
+}
+
+.our-services__item .column {
+    margin: 7px 0 -15px 20px;
+}
+.our-services__item h3 {
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.our-services__item p {
+    font-size: 11px;
+    word-spacing: 9px;
+    line-height: 18px;
+    padding: 12px 0 25px 0;
 }
